@@ -1,0 +1,50 @@
+{"id": "t00", "origin": "Indore", "destination": "Goa", "start_date": "2026-12-11", "end_date": "2026-12-14", "budget_inr": 8700, "travellers": 1, "preferences": [], "factor": 0.6}
+{"id": "t01", "origin": "Mumbai", "destination": "Goa", "start_date": "2026-11-22", "end_date": "2026-11-23", "budget_inr": 10500, "travellers": 3, "preferences": ["history"], "factor": 0.75}
+{"id": "t02", "origin": "Bengaluru", "destination": "Goa", "start_date": "2026-11-29", "end_date": "2026-11-30", "budget_inr": 13500, "travellers": 3, "preferences": [], "factor": 0.9}
+{"id": "t03", "origin": "Delhi", "destination": "Jaipur", "start_date": "2026-12-12", "end_date": "2026-12-13", "budget_inr": 9200, "travellers": 2, "preferences": [], "factor": 1.2}
+{"id": "t04", "origin": "Delhi", "destination": "Udaipur", "start_date": "2026-12-21", "end_date": "2026-12-23", "budget_inr": 14300, "travellers": 1, "preferences": ["nature"], "factor": 1.6}
+{"id": "t05", "origin": "Mumbai", "destination": "Udaipur", "start_date": "2026-11-23", "end_date": "2026-11-24", "budget_inr": 8500, "travellers": 3, "preferences": ["beach"], "factor": 0.6}
+{"id": "t06", "origin": "Indore", "destination": "Udaipur", "start_date": "2026-12-23", "end_date": "2026-12-24", "budget_inr": 9300, "travellers": 3, "preferences": ["nature"], "factor": 0.75}
+{"id": "t07", "origin": "Bengaluru", "destination": "Mysuru", "start_date": "2026-11-18", "end_date": "2026-11-18", "budget_inr": 1000, "travellers": 1, "preferences": ["culture", "shopping"], "factor": 0.9}
+{"id": "t08", "origin": "Indore", "destination": "Goa", "start_date": "2026-12-12", "end_date": "2026-12-14", "budget_inr": 19400, "travellers": 2, "preferences": ["beach"], "factor": 1.2}
+{"id": "t09", "origin": "Mumbai", "destination": "Goa", "start_date": "2026-12-05", "end_date": "2026-12-06", "budget_inr": 22500, "travellers": 3, "preferences": ["culture", "shopping"], "factor": 1.6}
+{"id": "t10", "origin": "Bengaluru", "destination": "Goa", "start_date": "2026-12-23", "end_date": "2026-12-25", "budget_inr": 5700, "travellers": 1, "preferences": ["culture", "shopping"], "factor": 0.6}
+{"id": "t11", "origin": "Delhi", "destination": "Jaipur", "start_date": "2026-11-22", "end_date": "2026-11-24", "budget_inr": 8700, "travellers": 2, "preferences": ["culture", "shopping"], "factor": 0.75}
+{"id": "t12", "origin": "Delhi", "destination": "Udaipur", "start_date": "2026-11-19", "end_date": "2026-11-20", "budget_inr": 12700, "travellers": 3, "preferences": ["culture", "shopping"], "factor": 0.9}
+{"id": "t13", "origin": "Mumbai", "destination": "Udaipur", "start_date": "2026-12-20", "end_date": "2026-12-22", "budget_inr": 15400, "travellers": 2, "preferences": ["nature"], "factor": 1.2}
+{"id": "t14", "origin": "Indore", "destination": "Udaipur", "start_date": "2026-12-23", "end_date": "2026-12-26", "budget_inr": 25300, "travellers": 2, "preferences": ["nature"], "factor": 1.6}
+{"id": "t15", "origin": "Bengaluru", "destination": "Mysuru", "start_date": "2026-11-27", "end_date": "2026-11-27", "budget_inr": 600, "travellers": 1, "preferences": ["beach"], "factor": 0.6}
+{"id": "t16", "origin": "Indore", "destination": "Goa", "start_date": "2026-12-05", "end_date": "2026-12-06", "budget_inr": 14300, "travellers": 3, "preferences": ["culture", "shopping"], "factor": 0.75}
+{"id": "t17", "origin": "Mumbai", "destination": "Goa", "start_date": "2026-12-14", "end_date": "2026-12-18", "budget_inr": 19500, "travellers": 2, "preferences": ["history"], "factor": 0.9}
+{"id": "t18", "origin": "Bengaluru", "destination": "Goa", "start_date": "2026-12-18", "end_date": "2026-12-19", "budget_inr": 7100, "travellers": 1, "preferences": ["nature"], "factor": 1.2}
+{"id": "t19", "origin": "Delhi", "destination": "Jaipur", "start_date": "2026-11-25", "end_date": "2026-11-27", "budget_inr": 18600, "travellers": 2, "preferences": ["nature"], "factor": 1.6}
+{"id": "t20", "origin": "Delhi", "destination": "Udaipur", "start_date": "2026-11-20", "end_date": "2026-11-24", "budget_inr": 9400, "travellers": 1, "preferences": ["culture", "shopping"], "factor": 0.6}
+{"id": "t21", "origin": "Mumbai", "destination": "Udaipur", "start_date": "2026-12-08", "end_date": "2026-12-11", "budget_inr": 12800, "travellers": 2, "preferences": ["culture", "shopping"], "factor": 0.75}
+{"id": "t22", "origin": "Indore", "destination": "Udaipur", "start_date": "2026-12-15", "end_date": "2026-12-19", "budget_inr": 31700, "travellers": 3, "preferences": [], "factor": 0.9}
+{"id": "t23", "origin": "Bengaluru", "destination": "Mysuru", "start_date": "2026-11-20", "end_date": "2026-11-23", "budget_inr": 17000, "travellers": 2, "preferences": [], "factor": 1.2}
+{"id": "t24", "origin": "Indore", "destination": "Goa", "start_date": "2026-12-22", "end_date": "2026-12-25", "budget_inr": 65900, "travellers": 4, "preferences": ["nature"], "factor": 1.6}
+{"id": "t25", "origin": "Mumbai", "destination": "Goa", "start_date": "2026-12-10", "end_date": "2026-12-13", "budget_inr": 20700, "travellers": 4, "preferences": ["history"], "factor": 0.6}
+{"id": "t26", "origin": "Bengaluru", "destination": "Goa", "start_date": "2026-12-08", "end_date": "2026-12-09", "budget_inr": 6800, "travellers": 2, "preferences": ["beach"], "factor": 0.75}
+{"id": "t27", "origin": "Delhi", "destination": "Jaipur", "start_date": "2026-11-19", "end_date": "2026-11-20", "budget_inr": 6900, "travellers": 2, "preferences": ["beach"], "factor": 0.9}
+{"id": "t28", "origin": "Delhi", "destination": "Udaipur", "start_date": "2026-12-01", "end_date": "2026-12-04", "budget_inr": 14800, "travellers": 1, "preferences": ["nature"], "factor": 1.2}
+{"id": "t29", "origin": "Mumbai", "destination": "Udaipur", "start_date": "2026-11-21", "end_date": "2026-11-25", "budget_inr": 34000, "travellers": 2, "preferences": ["beach"], "factor": 1.6}
+{"id": "t30", "origin": "Indore", "destination": "Udaipur", "start_date": "2026-12-21", "end_date": "2026-12-25", "budget_inr": 12000, "travellers": 2, "preferences": ["history"], "factor": 0.6}
+{"id": "t31", "origin": "Bengaluru", "destination": "Mysuru", "start_date": "2026-12-03", "end_date": "2026-12-07", "budget_inr": 24100, "travellers": 3, "preferences": ["nature"], "factor": 0.75}
+{"id": "t32", "origin": "Indore", "destination": "Goa", "start_date": "2026-12-10", "end_date": "2026-12-13", "budget_inr": 37000, "travellers": 4, "preferences": ["beach"], "factor": 0.9}
+{"id": "t33", "origin": "Mumbai", "destination": "Goa", "start_date": "2026-11-27", "end_date": "2026-11-29", "budget_inr": 11000, "travellers": 1, "preferences": ["beach"], "factor": 1.2}
+{"id": "t34", "origin": "Bengaluru", "destination": "Goa", "start_date": "2026-11-30", "end_date": "2026-12-02", "budget_inr": 43200, "travellers": 4, "preferences": [], "factor": 1.6}
+{"id": "t35", "origin": "Delhi", "destination": "Jaipur", "start_date": "2026-11-27", "end_date": "2026-12-01", "budget_inr": 20200, "travellers": 3, "preferences": ["history"], "factor": 0.6}
+{"id": "t36", "origin": "Delhi", "destination": "Udaipur", "start_date": "2026-11-25", "end_date": "2026-11-28", "budget_inr": 9200, "travellers": 1, "preferences": ["nature"], "factor": 0.75}
+{"id": "t37", "origin": "Mumbai", "destination": "Udaipur", "start_date": "2026-12-22", "end_date": "2026-12-25", "budget_inr": 26500, "travellers": 3, "preferences": ["history"], "factor": 0.9}
+{"id": "t38", "origin": "Indore", "destination": "Udaipur", "start_date": "2026-12-18", "end_date": "2026-12-20", "budget_inr": 27900, "travellers": 4, "preferences": ["culture", "shopping"], "factor": 1.2}
+{"id": "t39", "origin": "Bengaluru", "destination": "Mysuru", "start_date": "2026-12-21", "end_date": "2026-12-22", "budget_inr": 9900, "travellers": 2, "preferences": ["nature"], "factor": 1.6}
+{"id": "t40", "origin": "Indore", "destination": "Goa", "start_date": "2026-12-11", "end_date": "2026-12-15", "budget_inr": 15000, "travellers": 2, "preferences": [], "factor": 0.6}
+{"id": "t41", "origin": "Mumbai", "destination": "Goa", "start_date": "2026-12-11", "end_date": "2026-12-15", "budget_inr": 32500, "travellers": 4, "preferences": [], "factor": 0.75}
+{"id": "t42", "origin": "Bengaluru", "destination": "Goa", "start_date": "2026-11-29", "end_date": "2026-12-01", "budget_inr": 8600, "travellers": 1, "preferences": ["nature"], "factor": 0.9}
+{"id": "t43", "origin": "Delhi", "destination": "Jaipur", "start_date": "2026-12-07", "end_date": "2026-12-09", "budget_inr": 9700, "travellers": 1, "preferences": ["culture", "shopping"], "factor": 1.2}
+{"id": "t44", "origin": "Delhi", "destination": "Udaipur", "start_date": "2026-11-16", "end_date": "2026-11-17", "budget_inr": 8900, "travellers": 1, "preferences": ["culture", "shopping"], "factor": 1.6}
+{"id": "t45", "origin": "Mumbai", "destination": "Udaipur", "start_date": "2026-11-22", "end_date": "2026-11-24", "budget_inr": 13100, "travellers": 3, "preferences": ["history"], "factor": 0.6}
+{"id": "t46", "origin": "Indore", "destination": "Udaipur", "start_date": "2026-11-29", "end_date": "2026-11-30", "budget_inr": 3700, "travellers": 1, "preferences": ["culture", "shopping"], "factor": 0.75}
+{"id": "t47", "origin": "Bengaluru", "destination": "Mysuru", "start_date": "2026-12-02", "end_date": "2026-12-02", "budget_inr": 4000, "travellers": 4, "preferences": ["history"], "factor": 0.9}
+{"id": "t48", "origin": "Indore", "destination": "Goa", "start_date": "2026-11-23", "end_date": "2026-11-26", "budget_inr": 24700, "travellers": 2, "preferences": [], "factor": 1.2}
+{"id": "t49", "origin": "Mumbai", "destination": "Goa", "start_date": "2026-12-16", "end_date": "2026-12-20", "budget_inr": 34600, "travellers": 2, "preferences": ["nature"], "factor": 1.6}

@@ -1,0 +1,282 @@
+{
+ "Indore|Goa": [
+  {
+   "mode": "flight",
+   "provider": "IndiGo",
+   "depart": "06:10",
+   "arrive": "08:05",
+   "next_day": false,
+   "price_per_person": 5400
+  },
+  {
+   "mode": "flight",
+   "provider": "IndiGo",
+   "depart": "14:30",
+   "arrive": "16:25",
+   "next_day": false,
+   "price_per_person": 4300
+  },
+  {
+   "mode": "train",
+   "provider": "Indore Kochuveli Express",
+   "depart": "16:20",
+   "arrive": "13:45",
+   "next_day": true,
+   "price_per_person": 1450
+  },
+  {
+   "mode": "bus",
+   "provider": "Hans Travels Sleeper",
+   "depart": "17:00",
+   "arrive": "15:30",
+   "next_day": true,
+   "price_per_person": 1900
+  }
+ ],
+ "Mumbai|Goa": [
+  {
+   "mode": "flight",
+   "provider": "Akasa Air",
+   "depart": "07:00",
+   "arrive": "08:15",
+   "next_day": false,
+   "price_per_person": 3600
+  },
+  {
+   "mode": "flight",
+   "provider": "IndiGo",
+   "depart": "19:40",
+   "arrive": "20:55",
+   "next_day": false,
+   "price_per_person": 2900
+  },
+  {
+   "mode": "train",
+   "provider": "Vande Bharat 22229",
+   "depart": "05:25",
+   "arrive": "13:10",
+   "next_day": false,
+   "price_per_person": 1600
+  },
+  {
+   "mode": "train",
+   "provider": "Konkan Kanya Express",
+   "depart": "23:00",
+   "arrive": "10:45",
+   "next_day": true,
+   "price_per_person": 620
+  },
+  {
+   "mode": "bus",
+   "provider": "Neeta Volvo Sleeper",
+   "depart": "21:30",
+   "arrive": "09:00",
+   "next_day": true,
+   "price_per_person": 1300
+  }
+ ],
+ "Bengaluru|Goa": [
+  {
+   "mode": "flight",
+   "provider": "IndiGo",
+   "depart": "09:15",
+   "arrive": "10:30",
+   "next_day": false,
+   "price_per_person": 3300
+  },
+  {
+   "mode": "train",
+   "provider": "Vasco Express",
+   "depart": "20:00",
+   "arrive": "10:30",
+   "next_day": true,
+   "price_per_person": 780
+  },
+  {
+   "mode": "bus",
+   "provider": "VRL Sleeper",
+   "depart": "20:30",
+   "arrive": "08:30",
+   "next_day": true,
+   "price_per_person": 1200
+  }
+ ],
+ "Delhi|Jaipur": [
+  {
+   "mode": "flight",
+   "provider": "Air India",
+   "depart": "06:45",
+   "arrive": "07:45",
+   "next_day": false,
+   "price_per_person": 2800
+  },
+  {
+   "mode": "train",
+   "provider": "Ajmer Shatabdi",
+   "depart": "06:10",
+   "arrive": "10:40",
+   "next_day": false,
+   "price_per_person": 840
+  },
+  {
+   "mode": "train",
+   "provider": "Double Decker 12985",
+   "depart": "17:35",
+   "arrive": "22:05",
+   "next_day": false,
+   "price_per_person": 560
+  },
+  {
+   "mode": "bus",
+   "provider": "RSRTC Volvo",
+   "depart": "07:00",
+   "arrive": "12:30",
+   "next_day": false,
+   "price_per_person": 750
+  },
+  {
+   "mode": "bus",
+   "provider": "Zingbus AC Sleeper",
+   "depart": "23:30",
+   "arrive": "05:00",
+   "next_day": true,
+   "price_per_person": 650
+  }
+ ],
+ "Delhi|Udaipur": [
+  {
+   "mode": "flight",
+   "provider": "IndiGo",
+   "depart": "07:30",
+   "arrive": "09:00",
+   "next_day": false,
+   "price_per_person": 4800
+  },
+  {
+   "mode": "flight",
+   "provider": "SpiceJet",
+   "depart": "16:00",
+   "arrive": "17:35",
+   "next_day": false,
+   "price_per_person": 3900
+  },
+  {
+   "mode": "train",
+   "provider": "Chetak Express",
+   "depart": "19:30",
+   "arrive": "11:45",
+   "next_day": true,
+   "price_per_person": 690
+  },
+  {
+   "mode": "bus",
+   "provider": "Jakhar Sleeper",
+   "depart": "19:00",
+   "arrive": "09:30",
+   "next_day": true,
+   "price_per_person": 1400
+  }
+ ],
+ "Mumbai|Udaipur": [
+  {
+   "mode": "flight",
+   "provider": "IndiGo",
+   "depart": "08:20",
+   "arrive": "09:45",
+   "next_day": false,
+   "price_per_person": 4100
+  },
+  {
+   "mode": "train",
+   "provider": "Bandra Udaipur Express",
+   "depart": "21:00",
+   "arrive": "12:15",
+   "next_day": true,
+   "price_per_person": 720
+  },
+  {
+   "mode": "bus",
+   "provider": "Eagle Travels Sleeper",
+   "depart": "18:00",
+   "arrive": "08:00",
+   "next_day": true,
+   "price_per_person": 1500
+  }
+ ],
+ "Indore|Udaipur": [
+  {
+   "mode": "train",
+   "provider": "Udaipur Express",
+   "depart": "21:40",
+   "arrive": "07:20",
+   "next_day": true,
+   "price_per_person": 410
+  },
+  {
+   "mode": "bus",
+   "provider": "Chartered Bus AC",
+   "depart": "22:00",
+   "arrive": "06:30",
+   "next_day": true,
+   "price_per_person": 1100
+  },
+  {
+   "mode": "bus",
+   "provider": "MP Travels Seater",
+   "depart": "07:00",
+   "arrive": "15:30",
+   "next_day": false,
+   "price_per_person": 700
+  }
+ ],
+ "Bengaluru|Mysuru": [
+  {
+   "mode": "train",
+   "provider": "Shatabdi 12007",
+   "depart": "11:00",
+   "arrive": "13:00",
+   "next_day": false,
+   "price_per_person": 520
+  },
+  {
+   "mode": "train",
+   "provider": "Vande Bharat 20663",
+   "depart": "06:00",
+   "arrive": "07:45",
+   "next_day": false,
+   "price_per_person": 690
+  },
+  {
+   "mode": "bus",
+   "provider": "KSRTC Airavat",
+   "depart": "08:00",
+   "arrive": "11:00",
+   "next_day": false,
+   "price_per_person": 420
+  },
+  {
+   "mode": "bus",
+   "provider": "KSRTC Ordinary",
+   "depart": "09:00",
+   "arrive": "12:30",
+   "next_day": false,
+   "price_per_person": 180
+  },
+  {
+   "mode": "train",
+   "provider": "Chamundi Express",
+   "depart": "18:15",
+   "arrive": "21:15",
+   "next_day": false,
+   "price_per_person": 160
+  },
+  {
+   "mode": "bus",
+   "provider": "KSRTC Airavat Club Class",
+   "depart": "19:00",
+   "arrive": "22:00",
+   "next_day": false,
+   "price_per_person": 480
+  }
+ ]
+}

@@ -1,0 +1,563 @@
+[
+ {
+  "id": "city-goa",
+  "kind": "city",
+  "city": "Goa",
+  "title": "Goa",
+  "text": "Goa is best from November to February when the weather is dry and pleasant. The monsoon from June to September brings heavy rain and many beach shacks close. North Goa is lively and busy, South Goa is calmer. Try fish curry rice, prawn balchao, and for vegetarians mushroom xacuti and bebinca for dessert. Renting a scooter is common, but always wear a helmet.",
+  "tags": [
+   "city guide",
+   "food",
+   "best time"
+  ]
+ },
+ {
+  "id": "goa-p1",
+  "kind": "place",
+  "city": "Goa",
+  "title": "Basilica of Bom Jesus",
+  "category": "history",
+  "text": "Built between 1594 and 1605 in Old Goa, the basilica holds the remains of St Francis Xavier and is part of the Churches and Convents of Goa UNESCO World Heritage Site. Its plain laterite front hides a richly gilded Baroque interior.",
+  "tips": "Dress modestly, shoulders and knees covered. Combine it with Se Cathedral across the road. Quiet in the early morning.",
+  "tags": [
+   "history",
+   "church",
+   "unesco",
+   "quiet",
+   "morning"
+  ]
+ },
+ {
+  "id": "goa-p2",
+  "kind": "place",
+  "city": "Goa",
+  "title": "Fort Aguada",
+  "category": "history",
+  "text": "A Portuguese fort finished in 1612 to guard the mouth of the Mandovi river against Dutch and Maratha attacks. It held a large freshwater store for passing ships and has a lighthouse from 1864.",
+  "tips": "Go late afternoon and stay for the sunset over the Arabian Sea. Little shade at midday.",
+  "tags": [
+   "history",
+   "fort",
+   "sunset",
+   "views",
+   "photography"
+  ]
+ },
+ {
+  "id": "goa-p3",
+  "kind": "place",
+  "city": "Goa",
+  "title": "Baga Beach",
+  "category": "beach",
+  "text": "One of the busiest beaches in North Goa, known for beach shacks, water sports such as parasailing and jet skis, and nightlife on nearby Tito's Lane.",
+  "tips": "Crowded and loud in the evenings. Choose it for fun and food, not for a quiet beach. Swim only between the lifeguard flags.",
+  "tags": [
+   "beach",
+   "nightlife",
+   "water sports",
+   "crowded",
+   "food",
+   "adventure"
+  ]
+ },
+ {
+  "id": "goa-p4",
+  "kind": "place",
+  "city": "Goa",
+  "title": "Dudhsagar Falls Jeep Safari",
+  "category": "nature",
+  "text": "Dudhsagar, the sea of milk, is a four tier waterfall on the Mandovi river at the Goa and Karnataka border, around 310 metres tall and among the tallest in India. Jeeps run from Kulem through the Bhagwan Mahavir Wildlife Sanctuary.",
+  "tips": "Takes most of a day, so start early. Best from October to December when the water is high. Jeep rides usually stop in the monsoon. Carry water and shoes that can get wet.",
+  "tags": [
+   "nature",
+   "waterfall",
+   "day trip",
+   "adventure",
+   "far",
+   "hiking"
+  ]
+ },
+ {
+  "id": "goa-p5",
+  "kind": "place",
+  "city": "Goa",
+  "title": "Fontainhas Latin Quarter",
+  "category": "culture",
+  "text": "The Latin Quarter of Panaji, with narrow lanes and brightly painted Portuguese era houses with tiled roofs and azulejo tiles. The Our Lady of the Immaculate Conception church is a short walk away.",
+  "tips": "Best on foot in the morning light for photos. Stop at a local bakery for poi bread and bebinca.",
+  "tags": [
+   "culture",
+   "walk",
+   "photography",
+   "heritage",
+   "food",
+   "morning"
+  ]
+ },
+ {
+  "id": "goa-p6",
+  "kind": "place",
+  "city": "Goa",
+  "title": "Anjuna Flea Market",
+  "category": "shopping",
+  "text": "A weekly market in Anjuna that started in the hippie era of the late 1960s. Stalls sell clothes, jewellery, spices and souvenirs.",
+  "tips": "Open only on Wednesdays in the season from November to April. Bargain hard, start at about half the first price. Busy and hot by noon.",
+  "tags": [
+   "shopping",
+   "market",
+   "crowded",
+   "souvenirs"
+  ]
+ },
+ {
+  "id": "goa-p7",
+  "kind": "place",
+  "city": "Goa",
+  "title": "Chapora Fort",
+  "category": "history",
+  "text": "Ruins of a laterite fort above Vagator, rebuilt by the Portuguese in 1717. It became famous after the film Dil Chahta Hai was shot here.",
+  "tips": "Short but steep climb with loose stones. Sunset over Vagator beach is the main reason to go.",
+  "tags": [
+   "history",
+   "fort",
+   "sunset",
+   "views",
+   "photography"
+  ]
+ },
+ {
+  "id": "goa-p8",
+  "kind": "place",
+  "city": "Goa",
+  "title": "Goa State Museum",
+  "category": "history",
+  "text": "The state museum in Panaji with stone sculptures, Christian art, old furniture and coins from Goa's history.",
+  "tips": "Calm and air cooled, a good choice on a hot or rainy day. Closed on Mondays.",
+  "tags": [
+   "history",
+   "museum",
+   "quiet",
+   "rainy day",
+   "indoor"
+  ]
+ },
+ {
+  "id": "goa-p9",
+  "kind": "place",
+  "city": "Goa",
+  "title": "Palolem Beach",
+  "category": "beach",
+  "text": "A crescent shaped bay in South Goa with calm water and a line of palm trees. Much quieter than the beaches of North Goa.",
+  "tips": "Good for swimming and kayaking, and boat trips leave in the morning to look for dolphins. It is about 70 km south of Panaji, so plan the travel time.",
+  "tags": [
+   "beach",
+   "quiet",
+   "relaxing",
+   "swimming",
+   "kayaking",
+   "far"
+  ]
+ },
+ {
+  "id": "city-jaipur",
+  "kind": "city",
+  "city": "Jaipur",
+  "title": "Jaipur",
+  "text": "Jaipur, the Pink City, was planned by Sawai Jai Singh II in 1727 and painted pink in 1876 to welcome the Prince of Wales. Visit from October to March, since summer days often go above 40 degrees. Try dal baati churma, pyaaz kachori and ghewar. Most forts are best seen early in the morning. A composite ticket covers several monuments.",
+  "tags": [
+   "city guide",
+   "food",
+   "best time"
+  ]
+ },
+ {
+  "id": "jai-p1",
+  "kind": "place",
+  "city": "Jaipur",
+  "title": "Amber Fort",
+  "category": "history",
+  "text": "Built from 1592 by Raja Man Singh I in red sandstone and marble, Amber Fort sits above Maota Lake. The Sheesh Mahal hall is covered in mirror work. It is part of the Hill Forts of Rajasthan UNESCO World Heritage Site.",
+  "tips": "Go when it opens to avoid heat and crowds. Allow three hours. A sound and light show runs in the evening.",
+  "tags": [
+   "history",
+   "fort",
+   "unesco",
+   "palace",
+   "photography",
+   "hill"
+  ]
+ },
+ {
+  "id": "jai-p2",
+  "kind": "place",
+  "city": "Jaipur",
+  "title": "Hawa Mahal",
+  "category": "history",
+  "text": "The Palace of Winds, built in 1799 by Maharaja Sawai Pratap Singh. Its pink honeycomb front has 953 small windows that let royal women watch street life without being seen.",
+  "tips": "The front looks best in the early morning sun. The cafes across the road give the classic photo. Inside is small, an hour is enough.",
+  "tags": [
+   "history",
+   "palace",
+   "photography",
+   "morning"
+  ]
+ },
+ {
+  "id": "jai-p3",
+  "kind": "place",
+  "city": "Jaipur",
+  "title": "City Palace",
+  "category": "history",
+  "text": "Begun by Maharaja Sawai Jai Singh II, founder of Jaipur, from 1727. It mixes Rajput and Mughal styles, and part of the Chandra Mahal is still home to the royal family.",
+  "tips": "Do not miss the four painted gates of Pitam Niwas Chowk, one for each season. Combine with Jantar Mantar next door.",
+  "tags": [
+   "history",
+   "palace",
+   "museum",
+   "architecture"
+  ]
+ },
+ {
+  "id": "jai-p4",
+  "kind": "place",
+  "city": "Jaipur",
+  "title": "Jantar Mantar",
+  "category": "science",
+  "text": "An astronomical observatory completed in 1734 by Sawai Jai Singh II. Its Samrat Yantra is the largest stone sundial in the world. It is a UNESCO World Heritage Site.",
+  "tips": "Hire a guide or audio guide, the instruments make little sense without one. Very hot at midday with little shade.",
+  "tags": [
+   "science",
+   "history",
+   "unesco",
+   "astronomy"
+  ]
+ },
+ {
+  "id": "jai-p5",
+  "kind": "place",
+  "city": "Jaipur",
+  "title": "Nahargarh Fort",
+  "category": "history",
+  "text": "A fort on the Aravalli hills built in 1734 as a retreat and defence for the city. Madhavendra Bhawan inside has nine linked suites built for the king's queens.",
+  "tips": "Best known for the sunset view over Jaipur. The road up is winding, so leave before dark if you are not staying for dinner.",
+  "tags": [
+   "history",
+   "fort",
+   "sunset",
+   "views",
+   "hill"
+  ]
+ },
+ {
+  "id": "jai-p6",
+  "kind": "place",
+  "city": "Jaipur",
+  "title": "Albert Hall Museum",
+  "category": "history",
+  "text": "The oldest museum in Rajasthan, opened in 1887 in a grand Indo Saracenic building in Ram Niwas Garden. It holds carpets, armour, pottery and an Egyptian mummy.",
+  "tips": "The building is lit up at night and looks good after dark. A cool indoor stop in the afternoon heat.",
+  "tags": [
+   "history",
+   "museum",
+   "indoor",
+   "architecture"
+  ]
+ },
+ {
+  "id": "jai-p7",
+  "kind": "place",
+  "city": "Jaipur",
+  "title": "Johari Bazaar",
+  "category": "shopping",
+  "text": "A busy bazaar in the old Pink City known for jewellery, gemstones, lac bangles and textiles.",
+  "tips": "Bargain and buy gems only from shops that give a certificate. Try sweets at the old shops along the road. Closed on Sundays.",
+  "tags": [
+   "shopping",
+   "market",
+   "jewellery",
+   "food",
+   "crowded"
+  ]
+ },
+ {
+  "id": "jai-p8",
+  "kind": "place",
+  "city": "Jaipur",
+  "title": "Galtaji Temple",
+  "category": "culture",
+  "text": "An 18th century temple complex in a rocky gorge with natural spring fed water tanks, also called the Monkey Temple because of the many monkeys.",
+  "tips": "Keep food and loose items out of sight because of the monkeys. Climb to the Sun Temple on the ridge for the view at sunset.",
+  "tags": [
+   "culture",
+   "temple",
+   "nature",
+   "sunset",
+   "spiritual",
+   "hill",
+   "hiking"
+  ]
+ },
+ {
+  "id": "city-udaipur",
+  "kind": "city",
+  "city": "Udaipur",
+  "title": "Udaipur",
+  "text": "Udaipur, the City of Lakes, was founded in 1559 by Maharana Udai Singh II. September to March is the best time, when the lakes are full after the monsoon. Rooftop cafes around Lal Ghat give lake views at sunset. Try dal baati, gatte ki sabzi and kachori. The old city lanes are narrow, so walking or an auto rickshaw is easiest.",
+  "tags": [
+   "city guide",
+   "food",
+   "best time"
+  ]
+ },
+ {
+  "id": "udr-p1",
+  "kind": "place",
+  "city": "Udaipur",
+  "title": "City Palace Udaipur",
+  "category": "history",
+  "text": "A huge palace complex on the east bank of Lake Pichola, built over about 400 years starting with Maharana Udai Singh II, who founded Udaipur in 1559. It is the largest palace complex in Rajasthan.",
+  "tips": "Allow at least two and a half hours. The Crystal Gallery needs a separate ticket. Go early to beat tour groups.",
+  "tags": [
+   "history",
+   "palace",
+   "museum",
+   "views"
+  ]
+ },
+ {
+  "id": "udr-p2",
+  "kind": "place",
+  "city": "Udaipur",
+  "title": "Lake Pichola Boat Ride",
+  "category": "nature",
+  "text": "Lake Pichola is a man made lake from the 14th century. A boat ride shows the City Palace from the water, Jag Mandir island palace and the Taj Lake Palace hotel.",
+  "tips": "Take the evening sunset ride, it sells out, so book in the afternoon.",
+  "tags": [
+   "nature",
+   "lake",
+   "boat",
+   "sunset",
+   "romantic",
+   "photography"
+  ]
+ },
+ {
+  "id": "udr-p3",
+  "kind": "place",
+  "city": "Udaipur",
+  "title": "Jagdish Temple",
+  "category": "culture",
+  "text": "A large temple to Lord Vishnu built in 1651 by Maharana Jagat Singh I, a short walk from the City Palace, with detailed stone carving.",
+  "tips": "Free to enter, takes half an hour. The evening aarti is a good time to see it in use. Remove shoes at the steps.",
+  "tags": [
+   "culture",
+   "temple",
+   "spiritual",
+   "architecture"
+  ]
+ },
+ {
+  "id": "udr-p4",
+  "kind": "place",
+  "city": "Udaipur",
+  "title": "Sajjangarh Monsoon Palace",
+  "category": "history",
+  "text": "A hilltop palace built in 1884 by Maharana Sajjan Singh to watch monsoon clouds. It is inside the Sajjangarh Wildlife Sanctuary.",
+  "tips": "Famous for the sunset over the lakes. There is a separate entry fee for the sanctuary and a shuttle up the hill.",
+  "tags": [
+   "history",
+   "palace",
+   "sunset",
+   "views",
+   "nature",
+   "hill"
+  ]
+ },
+ {
+  "id": "udr-p5",
+  "kind": "place",
+  "city": "Udaipur",
+  "title": "Saheliyon ki Bari",
+  "category": "nature",
+  "text": "The Garden of the Maidens, laid out in the 18th century by Maharana Sangram Singh II, with fountains, lotus pools and marble elephants.",
+  "tips": "A short, calm stop. The fountains are at their best in the morning.",
+  "tags": [
+   "nature",
+   "garden",
+   "quiet",
+   "relaxing"
+  ]
+ },
+ {
+  "id": "udr-p6",
+  "kind": "place",
+  "city": "Udaipur",
+  "title": "Bagore ki Haveli Dance Show",
+  "category": "culture",
+  "text": "An 18th century mansion on Gangaur Ghat by Lake Pichola, now a museum. Every evening it hosts Dharohar, a show of Rajasthani folk dances and puppetry.",
+  "tips": "The show starts around 7 pm. Arrive half an hour early for a good seat.",
+  "tags": [
+   "culture",
+   "dance",
+   "evening",
+   "music",
+   "museum"
+  ]
+ },
+ {
+  "id": "udr-p7",
+  "kind": "place",
+  "city": "Udaipur",
+  "title": "Fateh Sagar Lake",
+  "category": "nature",
+  "text": "A lake built in 1678 and later rebuilt by Maharana Fateh Singh, with Nehru Garden on an island in the middle. The road around it is popular for evening walks.",
+  "tips": "Go in the evening for the lake breeze, street food and a boat to Nehru Garden.",
+  "tags": [
+   "nature",
+   "lake",
+   "evening",
+   "relaxing",
+   "food"
+  ]
+ },
+ {
+  "id": "udr-p8",
+  "kind": "place",
+  "city": "Udaipur",
+  "title": "Vintage Car Museum",
+  "category": "history",
+  "text": "The Maharanas of Mewar's collection of classic cars, including Rolls Royces and a Cadillac, kept at the Garden Hotel.",
+  "tips": "Under an hour. The Garden Hotel restaurant next door serves a traditional Rajasthani thali.",
+  "tags": [
+   "history",
+   "museum",
+   "cars",
+   "indoor",
+   "food"
+  ]
+ },
+ {
+  "id": "city-mysuru",
+  "kind": "city",
+  "city": "Mysuru",
+  "title": "Mysuru",
+  "text": "Mysuru was the capital of the Wodeyar kings and is famous for its Dasara festival in September or October, when the palace is lit every night. October to March is the most pleasant time. Try Mysore pak, Mysore masala dosa and filter coffee. Mysore silk and sandalwood products are the classic things to buy.",
+  "tags": [
+   "city guide",
+   "food",
+   "best time"
+  ]
+ },
+ {
+  "id": "mys-p1",
+  "kind": "place",
+  "city": "Mysuru",
+  "title": "Mysore Palace",
+  "category": "history",
+  "text": "Amba Vilas, seat of the Wodeyar kings. The present palace was finished in 1912 to a design by Henry Irwin after a fire destroyed the older wooden one. It mixes Hindu, Mughal and Gothic styles.",
+  "tips": "Shoes must be left outside. On Sunday evenings and during Dasara the palace is lit with nearly 100,000 bulbs, so plan a return visit after dark.",
+  "tags": [
+   "history",
+   "palace",
+   "architecture",
+   "evening",
+   "photography"
+  ]
+ },
+ {
+  "id": "mys-p2",
+  "kind": "place",
+  "city": "Mysuru",
+  "title": "Chamundi Hills Temple",
+  "category": "culture",
+  "text": "A hill above Mysuru with the Chamundeshwari Temple to the city's guardian goddess at the top. A path of about 1,000 steps passes a giant stone Nandi bull carved in the 17th century.",
+  "tips": "Take the road up and walk down the steps to see the Nandi. Expect long queues on weekends and festival days.",
+  "tags": [
+   "culture",
+   "temple",
+   "spiritual",
+   "views",
+   "hiking",
+   "hill"
+  ]
+ },
+ {
+  "id": "mys-p3",
+  "kind": "place",
+  "city": "Mysuru",
+  "title": "Brindavan Gardens",
+  "category": "nature",
+  "text": "Terraced gardens below the Krishna Raja Sagara dam on the Kaveri river, about 20 km from the city.",
+  "tips": "Go late in the afternoon and stay for the musical fountain show after sunset. Busy at weekends.",
+  "tags": [
+   "nature",
+   "garden",
+   "evening",
+   "fountain",
+   "family"
+  ]
+ },
+ {
+  "id": "mys-p4",
+  "kind": "place",
+  "city": "Mysuru",
+  "title": "Devaraja Market",
+  "category": "shopping",
+  "text": "A market more than a hundred years old in the heart of Mysuru, with piles of flowers, fruits, spices, kumkum powder and sandalwood.",
+  "tips": "Go in the morning when the flower stalls are freshest. Great for photos. Bargain for sandalwood and incense.",
+  "tags": [
+   "shopping",
+   "market",
+   "photography",
+   "food",
+   "morning"
+  ]
+ },
+ {
+  "id": "mys-p5",
+  "kind": "place",
+  "city": "Mysuru",
+  "title": "St Philomena's Church",
+  "category": "culture",
+  "text": "A neo Gothic church built from 1936 and inspired by Cologne Cathedral, with twin spires that are among the tallest in Asia.",
+  "tips": "Short visit. See the stained glass and the crypt below the altar. Keep quiet during services.",
+  "tags": [
+   "culture",
+   "church",
+   "architecture",
+   "quiet"
+  ]
+ },
+ {
+  "id": "mys-p6",
+  "kind": "place",
+  "city": "Mysuru",
+  "title": "Mysore Zoo",
+  "category": "nature",
+  "text": "Sri Chamarajendra Zoological Gardens, opened in 1892 under royal patronage and one of the oldest zoos in India.",
+  "tips": "Allow two and a half hours and wear walking shoes. Good for families with children. Closed on Tuesdays.",
+  "tags": [
+   "nature",
+   "zoo",
+   "family",
+   "kids",
+   "animals"
+  ]
+ },
+ {
+  "id": "mys-p7",
+  "kind": "place",
+  "city": "Mysuru",
+  "title": "Jaganmohan Palace Art Gallery",
+  "category": "history",
+  "text": "A palace built in 1861 that now houses an art gallery with paintings by Raja Ravi Varma, old musical instruments and royal objects.",
+  "tips": "A quiet indoor stop, good in the afternoon heat. Photography is not allowed inside.",
+  "tags": [
+   "history",
+   "art",
+   "museum",
+   "indoor",
+   "quiet"
+  ]
+ }
+]

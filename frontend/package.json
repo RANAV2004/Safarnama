@@ -1,0 +1,33 @@
+{
+  "name": "safarnama-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "make:globe": "node scripts/copy-world.mjs"
+  },
+  "dependencies": {
+    "@fontsource/mukta": "5.3.0",
+    "@fontsource/yatra-one": "5.3.0",
+    "d3-geo": "3.1.1",
+    "next": "15.5.28",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "topojson-client": "3.1.0"
+  },
+  "devDependencies": {
+    "@types/d3-geo": "3.1.1",
+    "@types/node": "22.15.3",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "@types/topojson-client": "3.1.5",
+    "typescript": "5.8.3",
+    "world-atlas": "2.0.2"
+  },
+  "overrides": {
+    "postcss": "8.5.31"
+  }
+}

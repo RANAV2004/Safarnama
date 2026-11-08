@@ -1,0 +1,250 @@
+{
+ "Goa": [
+  {
+   "id": "goa-h1",
+   "name": "Zostel Anjuna",
+   "area": "Anjuna",
+   "price_per_night_inr": 900,
+   "rating": 4.3,
+   "checkin_from": "12:00",
+   "checkin_until": "23:00",
+   "late_checkin": true,
+   "lat": 15.58,
+   "lng": 73.744
+  },
+  {
+   "id": "goa-h2",
+   "name": "Calangute Bay Residency",
+   "area": "Calangute",
+   "price_per_night_inr": 2100,
+   "rating": 3.9,
+   "checkin_from": "12:00",
+   "checkin_until": "21:00",
+   "late_checkin": false,
+   "lat": 15.544,
+   "lng": 73.762
+  },
+  {
+   "id": "goa-h3",
+   "name": "Panjim Inn",
+   "area": "Panaji",
+   "price_per_night_inr": 3800,
+   "rating": 4.4,
+   "checkin_from": "12:00",
+   "checkin_until": "22:00",
+   "late_checkin": false,
+   "lat": 15.498,
+   "lng": 73.828
+  },
+  {
+   "id": "goa-h4",
+   "name": "Treebo Candolim",
+   "area": "Candolim",
+   "price_per_night_inr": 2800,
+   "rating": 4.0,
+   "checkin_from": "12:00",
+   "checkin_until": "23:59",
+   "late_checkin": true,
+   "lat": 15.518,
+   "lng": 73.763
+  },
+  {
+   "id": "goa-h5",
+   "name": "Taj Fort Aguada",
+   "area": "Candolim",
+   "price_per_night_inr": 14500,
+   "rating": 4.7,
+   "checkin_from": "12:00",
+   "checkin_until": "23:59",
+   "late_checkin": true,
+   "lat": 15.497,
+   "lng": 73.774
+  },
+  {
+   "id": "goa-h6",
+   "name": "Baga Beach Hostel",
+   "area": "Baga",
+   "price_per_night_inr": 750,
+   "rating": 3.8,
+   "checkin_from": "12:00",
+   "checkin_until": "20:00",
+   "late_checkin": false,
+   "lat": 15.556,
+   "lng": 73.751
+  }
+ ],
+ "Jaipur": [
+  {
+   "id": "jai-h1",
+   "name": "Moustache Hostel",
+   "area": "Bani Park",
+   "price_per_night_inr": 800,
+   "rating": 4.4,
+   "checkin_from": "12:00",
+   "checkin_until": "23:59",
+   "late_checkin": true,
+   "lat": 26.928,
+   "lng": 75.795
+  },
+  {
+   "id": "jai-h2",
+   "name": "Hotel Pearl Palace",
+   "area": "Hathroi",
+   "price_per_night_inr": 2300,
+   "rating": 4.6,
+   "checkin_from": "12:00",
+   "checkin_until": "22:00",
+   "late_checkin": false,
+   "lat": 26.917,
+   "lng": 75.799
+  },
+  {
+   "id": "jai-h3",
+   "name": "Umaid Bhawan Heritage",
+   "area": "Bani Park",
+   "price_per_night_inr": 4200,
+   "rating": 4.5,
+   "checkin_from": "12:00",
+   "checkin_until": "23:00",
+   "late_checkin": false,
+   "lat": 26.93,
+   "lng": 75.793
+  },
+  {
+   "id": "jai-h4",
+   "name": "FabHotel Pink City",
+   "area": "MI Road",
+   "price_per_night_inr": 1600,
+   "rating": 3.7,
+   "checkin_from": "12:00",
+   "checkin_until": "21:00",
+   "late_checkin": false,
+   "lat": 26.915,
+   "lng": 75.81
+  },
+  {
+   "id": "jai-h5",
+   "name": "ITC Rajputana",
+   "area": "Gopalbari",
+   "price_per_night_inr": 9800,
+   "rating": 4.6,
+   "checkin_from": "12:00",
+   "checkin_until": "23:59",
+   "late_checkin": true,
+   "lat": 26.921,
+   "lng": 75.789
+  }
+ ],
+ "Udaipur": [
+  {
+   "id": "udr-h1",
+   "name": "Zostel Udaipur",
+   "area": "Lal Ghat",
+   "price_per_night_inr": 850,
+   "rating": 4.5,
+   "checkin_from": "12:00",
+   "checkin_until": "23:59",
+   "late_checkin": true,
+   "lat": 24.578,
+   "lng": 73.682
+  },
+  {
+   "id": "udr-h2",
+   "name": "Jagat Niwas Palace",
+   "area": "Lal Ghat",
+   "price_per_night_inr": 4500,
+   "rating": 4.4,
+   "checkin_from": "12:00",
+   "checkin_until": "22:00",
+   "late_checkin": false,
+   "lat": 24.578,
+   "lng": 73.683
+  },
+  {
+   "id": "udr-h3",
+   "name": "Hotel Udai Niwas",
+   "area": "Gangaur Ghat",
+   "price_per_night_inr": 1700,
+   "rating": 4.1,
+   "checkin_from": "12:00",
+   "checkin_until": "21:30",
+   "late_checkin": false,
+   "lat": 24.579,
+   "lng": 73.684
+  },
+  {
+   "id": "udr-h4",
+   "name": "Treebo Lake View",
+   "area": "Fateh Sagar",
+   "price_per_night_inr": 2600,
+   "rating": 3.9,
+   "checkin_from": "12:00",
+   "checkin_until": "23:59",
+   "late_checkin": true,
+   "lat": 24.6,
+   "lng": 73.677
+  },
+  {
+   "id": "udr-h5",
+   "name": "The Leela Palace",
+   "area": "Pichola",
+   "price_per_night_inr": 28000,
+   "rating": 4.8,
+   "checkin_from": "12:00",
+   "checkin_until": "23:59",
+   "late_checkin": true,
+   "lat": 24.575,
+   "lng": 73.672
+  }
+ ],
+ "Mysuru": [
+  {
+   "id": "mys-h1",
+   "name": "Hotel Mayura Hoysala",
+   "area": "Jhansi Lakshmibai Rd",
+   "price_per_night_inr": 2400,
+   "rating": 4.0,
+   "checkin_from": "12:00",
+   "checkin_until": "22:00",
+   "late_checkin": false,
+   "lat": 12.306,
+   "lng": 76.648
+  },
+  {
+   "id": "mys-h2",
+   "name": "Mansion 1907",
+   "area": "Vani Vilas",
+   "price_per_night_inr": 1300,
+   "rating": 4.2,
+   "checkin_from": "12:00",
+   "checkin_until": "21:00",
+   "late_checkin": false,
+   "lat": 12.303,
+   "lng": 76.651
+  },
+  {
+   "id": "mys-h3",
+   "name": "Royal Orchid Metropole",
+   "area": "Jhansi Lakshmibai Rd",
+   "price_per_night_inr": 5600,
+   "rating": 4.4,
+   "checkin_from": "12:00",
+   "checkin_until": "23:59",
+   "late_checkin": true,
+   "lat": 12.307,
+   "lng": 76.647
+  },
+  {
+   "id": "mys-h4",
+   "name": "Treebo Nalapad",
+   "area": "Chamaraja",
+   "price_per_night_inr": 1900,
+   "rating": 3.8,
+   "checkin_from": "12:00",
+   "checkin_until": "23:59",
+   "late_checkin": true,
+   "lat": 12.31,
+   "lng": 76.655
+  }
+ ]
+}
