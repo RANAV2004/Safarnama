@@ -65,20 +65,26 @@ export default function Photo({
   id,
   kind,
   name,
+  src,
   eager = false,
-  cover = false,
 }: {
   id: string;
   kind: string;
   name: string;
+  src?: string | null;
   eager?: boolean;
   cover?: boolean;
 }) {
   const box = useRef<HTMLDivElement>(null);
-  const [media, setMedia] = useState<Media | null | undefined>(undefined);
+  const [media, setMedia] = useState<Media | null | undefined>(
+    src ? { title: name, extract: "", image: src, page: "" } : undefined,
+  );
   const [loaded, setLoaded] = useState(false);
-  const [wide, setWide] = useState(false);
   useEffect(() => {
+    if (src) {
+      setMedia({ title: name, extract: "", image: src, page: "" });
+      return;
+    }
     let alive = true;
     const start = () => loadMedia(id).then((m) => alive && setMedia(m));
     if (eager || typeof IntersectionObserver === "undefined") {
@@ -94,33 +100,26 @@ export default function Photo({
           start();
         }
       },
-      { rootMargin: "200px" },
+      { rootMargin: "300px" },
     );
     if (box.current) seen.observe(box.current);
     return () => {
       alive = false;
       seen.disconnect();
     };
-  }, [id, eager]);
+  }, [id, eager, src, name]);
   return (
-    <div
-      ref={box}
-      className={`photo${wide ? " wide" : ""}`}
-      style={wide && media?.image ? ({ "--photo": `url("${media.image}")` } as React.CSSProperties) : undefined}
-    >
+    <div ref={box} className="photo">
       {media?.image ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={media.image}
           alt={name}
           loading={eager ? "eager" : "lazy"}
+          decoding="async"
+          fetchPriority={eager ? "high" : "auto"}
           className={loaded ? "shown" : ""}
-          onLoad={(e) => {
-            const img = e.currentTarget;
-            const box = img.parentElement!.getBoundingClientRect();
-            setWide(!cover && img.naturalWidth / img.naturalHeight > (box.width / box.height) * 1.8);
-            setLoaded(true);
-          }}
+          onLoad={() => setLoaded(true)}
           onError={() => setMedia(null)}
         />
       ) : null}

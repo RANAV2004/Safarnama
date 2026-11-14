@@ -5,8 +5,8 @@ import type { Card, MyJourney, Pins, Plan, Stay, Transport } from "@/lib/api";
 import { clock, rupees, shortDate, toRupeeSign } from "@/lib/format";
 import AgentLog from "./AgentLog";
 import BookingPaste from "./BookingPaste";
-import Photo from "./Photo";
-import PlaceSheet, { KIND_NAMES } from "./PlaceSheet";
+import DayByDay from "./DayByDay";
+import PlaceSheet from "./PlaceSheet";
 import StopsOnTheWay from "./StopsOnTheWay";
 type Props = {
   plan: Plan;
@@ -229,65 +229,16 @@ export default function Itinerary({ plan, pins, setPins, dirty, busy, downloadin
         <StopsOnTheWay route={plan.stops} byRoad={byRoad} onOpen={setOpen} />
       )}
       <section>
-        <h3>Day by day</h3>
-        {plan.days.map((d, i) => (
-          <div key={d.date} className="day">
-            <p className="day-title">
-              <strong>Day {i + 1}</strong> <span className="muted">{shortDate(d.date)}</span>
-            </p>
-            <ul className="timeline">
-              {d.items.map((it, j) => {
-                const removed = it.place_id !== null && pins.exclude_places.includes(it.place_id);
-                const card = it.kind === "place" && it.place_id ? cardFor(it.place_id) : null;
-                return (
-                  <li key={j} className={`${it.kind} ${removed ? "removed" : ""}`}>
-                    <time>{it.start === it.end ? it.start : `${it.start} to ${it.end}`}</time>
-                    {card ? (
-                      <button type="button" className="what place-row" onClick={() => card.lat && setOpen(card)}>
-                        <Photo id={card.id} kind={card.category} name={card.name} />
-                        <span>
-                          <strong>{it.title}</strong>
-                          {it.cost_inr > 0 && <span className="muted"> {rupees(it.cost_inr)}</span>}
-                          {card.text && <span className="blurb">{card.text}</span>}
-                        </span>
-                      </button>
-                    ) : (
-                      <span className="what">{it.title}</span>
-                    )}
-                    {it.kind === "place" && it.place_id && (
-                      <button
-                        type="button"
-                        className="link small"
-                        onClick={() => (removed ? restorePlace(it.place_id!) : removePlace(it.place_id!))}
-                      >
-                        {removed ? "Undo" : "Remove"}
-                      </button>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-            {meals.get(d.date) && (
-              <div className="eat">
-                <p className="label">Eat nearby</p>
-                <div className="eat-row">
-                  {meals.get(d.date)!.map((m) => (
-                    <button key={m.id} type="button" className="eat-chip" onClick={() => setOpen(m)}>
-                      <Photo id={m.id} kind={m.kind} name={m.name} />
-                      <span>
-                        <span className="kicker">
-                          {KIND_NAMES[m.kind]} · {m.km} km
-                        </span>
-                        <strong>{m.name}</strong>
-                        {m.must_try && <span className="muted small">Try the {m.must_try.toLowerCase()}</span>}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
+        <DayByDay
+          days={plan.days}
+          destination={r.destination}
+          meals={meals}
+          excluded={pins.exclude_places}
+          cardFor={cardFor}
+          onOpen={setOpen}
+          onRemove={removePlace}
+          onRestore={restorePlace}
+        />
         <div className="add-place">
           <label>
             <span className="label">Add a place</span>

@@ -26,6 +26,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://commons.wikimedia.org" />
+        <link rel="preconnect" href="https://thumb.wikimedia.org" />
+        <link rel="preconnect" href="https://upload.wikimedia.org" />
+      </head>
       <body>
         {children}
         <InstallApp />

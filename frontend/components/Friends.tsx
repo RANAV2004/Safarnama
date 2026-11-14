@@ -60,7 +60,7 @@ export default function Friends({ tripId, route, dates, user, onAuthError, onLef
   const gmail = `https://mail.google.com/mail/?view=cm&fs=1&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   const mail = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   return (
-    <section className="friends">
+    <section className="friends friends-dock card" aria-label="Travelling together">
       <h3>Travelling together</h3>
       <ul className="people">
         {members.map((m) => (

@@ -105,8 +105,8 @@ def road(a: str, b: str, cache: Path) -> list[tuple[float, float]]:
         (la1, lo1), (la2, lo2) = ENDS[a], ENDS[b]
         req = urllib.request.Request(OSRM.format(lo1, la1, lo2, la2), headers={"User-Agent": USER_AGENT})
         with urllib.request.urlopen(req, timeout=60) as r:
-            path.write_text(r.read().decode())
-    coords = json.loads(path.read_text())["routes"][0]["geometry"]["coordinates"]
+            path.write_text(r.read().decode(), encoding="utf-8")
+    coords = json.loads(path.read_text(encoding="utf-8"))["routes"][0]["geometry"]["coordinates"]
     return [(lat, lng) for lng, lat in coords]
 
 
@@ -223,9 +223,9 @@ def build_route(key: str, cache: Path) -> dict:
 def main(cache_dir: str = "data/wikivoyage") -> int:
     cache = Path(cache_dir)
     cache.mkdir(parents=True, exist_ok=True)
-    data = json.loads(OUT.read_text())
+    data = json.loads(OUT.read_text(encoding="utf-8"))
     data["routes"] = {key: build_route(key, cache) for key in STATES}
-    OUT.write_text(json.dumps(data, indent=1, ensure_ascii=False))
+    OUT.write_text(json.dumps(data, indent=1, ensure_ascii=False), encoding="utf-8")
     return 0
 
 

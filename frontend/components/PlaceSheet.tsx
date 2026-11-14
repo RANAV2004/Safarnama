@@ -40,7 +40,8 @@ export default function PlaceSheet({ card, onClose }: { card: Card; onClose: () 
     <div className="overlay sheet-overlay" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
       <div className="sheet" role="dialog" aria-modal="true" aria-label={card.name}>
         <div className="sheet-photo">
-          <Photo id={card.id} kind={kind} name={card.name} eager />
+          <Photo id={card.id} kind={kind} name={card.name} src={card.photo_url} eager />
+          {card.photo_note && <span className="photo-note">{card.photo_note}, not this place</span>}
           <button ref={closeBtn} type="button" className="sheet-close" onClick={onClose} aria-label="Close">
             <svg
               viewBox="0 0 24 24"
@@ -94,11 +95,12 @@ export default function PlaceSheet({ card, onClose }: { card: Card; onClose: () 
             </p>
           )}
           <h3>Where it is</h3>
-          {card.lat !== null && card.lng !== null ? (
-            <MapView lat={card.lat} lng={card.lng} name={card.name} />
-          ) : (
-            <p className="muted small">The exact spot is not on our map yet. Google Maps finds it by name.</p>
-          )}
+          <MapView
+            lat={card.lat}
+            lng={card.lng}
+            name={card.name}
+            query={decodeURIComponent(card.maps_url.split("query=")[1] ?? card.name).replace(/\+/g, " ")}
+          />
           <div className="sheet-actions">
             <a className="btn-primary" href={card.maps_url} target="_blank" rel="noreferrer">
               Open in Google Maps

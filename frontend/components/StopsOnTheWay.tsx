@@ -26,7 +26,7 @@ export default function StopsOnTheWay({
         {route.stops.map((s) => (
           <li key={s.id}>
             <button type="button" className="stop-card" onClick={() => onOpen(s)}>
-              <Photo id={s.id} kind={s.kind} name={s.name} />
+              <Photo id={s.id} kind={s.kind} name={s.name} src={s.photo_url} />
               <span className="stop-text">
                 <span className="kicker">
                   {KIND_NAMES[s.kind] ?? "Town"} ·{" "}

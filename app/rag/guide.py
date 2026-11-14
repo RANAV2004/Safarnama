@@ -11,7 +11,7 @@ GUIDE_FILE = Path(__file__).resolve().parents[2] / "fixtures" / "guide.json"
 
 @lru_cache
 def docs() -> dict[str, dict]:
-    return {d["id"]: d for d in json.loads(GUIDE_FILE.read_text())}
+    return {d["id"]: d for d in json.loads(GUIDE_FILE.read_text(encoding="utf-8"))}
 
 
 def doc_text(d: dict) -> str:

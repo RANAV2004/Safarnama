@@ -3,7 +3,7 @@
 import json
 from functools import lru_cache
 from pathlib import Path
-from urllib.parse import quote_plus
+from urllib.parse import quote, quote_plus
 
 from app import google_places as google
 from app.providers.fixture import load as load_fixture
@@ -37,7 +37,16 @@ MEAL_KM = 8
 
 @lru_cache
 def data() -> dict:
-    return json.loads(EXPLORE_FILE.read_text())
+    return json.loads(EXPLORE_FILE.read_text(encoding="utf-8"))
+
+
+PHOTO_URL = "https://commons.wikimedia.org/wiki/Special:FilePath/{}?width={}"
+CARD_WIDTH = 960
+HERO_WIDTH = 1920
+
+
+def photo_url(file: str | None, width: int = CARD_WIDTH) -> str | None:
+    return PHOTO_URL.format(quote(file.replace(" ", "_")), width) if file else None
 
 
 def maps_url(name: str, area: str, city: str) -> str:
@@ -63,11 +72,17 @@ def place_card(p: dict, city: str) -> dict:
         "wiki": data()["wiki"].get(p["id"], ""),
         "maps_url": maps_url(p["name"], "", city),
         "source": "Safarnama travel guide",
+        "photo_url": photo_url(data().get("place_photos", {}).get(p["id"])),
     }
 
 
 def explore_card(c: dict, city: str) -> dict:
-    return {"tip": "", **c, "maps_url": maps_url(c["name"], c.get("area", ""), city)}
+    return {
+        "tip": "",
+        **c,
+        "maps_url": maps_url(c["name"], c.get("area", ""), city),
+        "photo_url": photo_url(c.get("photo")),
+    }
 
 
 def city_places(city: str) -> list[dict]:
@@ -75,7 +90,7 @@ def city_places(city: str) -> list[dict]:
 
 
 def landmark(c: dict) -> str | None:
-    return next((x["id"] for k in ("attraction", "photo") for x in c["sections"].get(k, []) if x.get("image")), None)
+    return next((x["id"] for k in ("attraction", "photo") for x in c["sections"].get(k, []) if x.get("photo") or x.get("image")), None)
 
 
 def cities() -> list[dict]:
@@ -90,6 +105,7 @@ def cities() -> list[dict]:
                 "lng": c["lng"],
                 "banner": c["banner"],
                 "photo_id": landmark(c),
+                "photo_url": photo_url(c.get("photo")),
                 "counts": {k: len(v) for k, v in c["sections"].items()},
             }
         )
@@ -128,6 +144,7 @@ def city(name: str) -> dict | None:
         "lat": c["lat"],
         "lng": c["lng"],
         "banner": c["banner"],
+        "photo_url": photo_url(c.get("photo"), HERO_WIDTH),
         "info": c["info"],
         "top": top,
         "sections": sections,
@@ -150,7 +167,14 @@ def all_cards() -> dict[str, dict]:
                 out.setdefault(x["id"], explore_card(x, name))
     for r in data()["routes"].values():
         for s in r["stops"]:
-            out[s["id"]] = {"area": "", "tip": "", "category": s["kind"], **s, "maps_url": maps_url(s["name"], "", "")}
+            out[s["id"]] = {
+                "area": "",
+                "tip": "",
+                "category": s["kind"],
+                **s,
+                "maps_url": maps_url(s["name"], "", ""),
+                "photo_url": photo_url(s.get("photo")),
+            }
     return out
 
 
@@ -162,6 +186,8 @@ def city_banner(name: str) -> str | None:
     c = data()["cities"].get(name)
     if not c:
         return None
+    if c.get("photo"):
+        return c["photo"]
     if c["banner"]:
         return c["banner"]
     spot = landmark(c)
@@ -206,6 +232,7 @@ def stops(origin: str, destination: str) -> dict | None:
                 "category": s["kind"],
                 **s,
                 "maps_url": maps_url(s["name"], "", ""),
+                "photo_url": s.get("photo_url") or photo_url(s.get("photo")),
                 "from_start_km": round(km_between(*a, *here)),
                 "progress": round(min(1.0, max(0.0, progress(a, b, here))), 3),
             }

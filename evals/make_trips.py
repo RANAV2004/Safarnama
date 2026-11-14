@@ -50,7 +50,7 @@ def main(n: int = 50, seed: int = 7):
                 "factor": factor,
             }
         )
-    OUT.write_text("\n".join(json.dumps(t) for t in trips) + "\n")
+    OUT.write_text("\n".join(json.dumps(t) for t in trips) + "\n", encoding="utf-8")
     print(f"wrote {len(trips)} trips to {OUT}")
 
 

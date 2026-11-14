@@ -463,6 +463,8 @@ def item_media(item_id: str = Path(max_length=80)):
         if banner:
             return media.commons(banner, item_id)
         return {"title": item_id, "extract": "", "image": None, "page": ""}
+    if item.get("photo"):
+        return media.commons(item["photo"], item["name"])
     if item.get("image"):
         return media.commons(item["image"], item["name"])
     found = media.summary(item["wiki"]) if item.get("wiki") else None

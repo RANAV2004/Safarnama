@@ -118,6 +118,8 @@ export type Card = {
   entry_fee_inr?: number;
   maps_url: string;
   source?: string;
+  photo_url?: string | null;
+  photo_note?: string;
 };
 export type Stop = Card & {
   on_way: boolean;
@@ -138,6 +140,7 @@ export type CitySummary = {
   lng: number | null;
   banner: string | null;
   photo_id?: string | null;
+  photo_url?: string | null;
   counts: Record<string, number>;
 };
 export type CityGuide = CitySummary & {

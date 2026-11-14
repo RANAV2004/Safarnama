@@ -8,7 +8,7 @@ const csp = [
   `script-src 'self' 'unsafe-inline'${dev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://upload.wikimedia.org https://thumb.wikimedia.org https://commons.wikimedia.org https://lh3.googleusercontent.com https://lh4.googleusercontent.com https://lh5.googleusercontent.com https://lh6.googleusercontent.com",
-  "frame-src https://www.openstreetmap.org",
+  "frame-src https://maps.google.com https://www.google.com",
   "font-src 'self' data:",
   `connect-src 'self' ${api}`,
   "object-src 'none'",

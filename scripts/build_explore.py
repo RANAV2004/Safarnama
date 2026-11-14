@@ -91,13 +91,13 @@ def get(url: str) -> tuple[int, str]:
 def fetch(title: str, cache: Path, client=None) -> str:
     path = cache / (re.sub(r"[^A-Za-z0-9]+", "_", title) + ".txt")
     if path.exists():
-        return path.read_text()
+        return path.read_text(encoding="utf-8")
     for wait in (5, 15, 30, 60, 120):
         status, text = get(RAW.format(quote(title.replace(" ", "_"), safe="/")))
         if status == 200:
             if m := re.match(r"#REDIRECT\s*\[\[([^\]|#]+)", text, re.I):
                 return fetch(m.group(1).strip(), cache)
-            path.write_text(text)
+            path.write_text(text, encoding="utf-8")
             time.sleep(1.5)
             return text
         if status == 404:
@@ -135,9 +135,19 @@ def paragraphs(code: str, limit: int) -> str:
                 wiki.remove(link)
             except ValueError:
                 pass
-    parts = [plain(p) for p in re.split(r"\n\s*\n", str(wiki))]
+    parts = [english(plain(p)) for p in re.split(r"\n\s*\n", str(wiki))]
     parts = [p for p in parts if len(p) > 40 and not p.startswith(("*", "|", "{", "File:", "Image:"))]
     return clip(" ".join(parts), limit)
+
+
+LANGUAGES = "Hindi|Marathi|Konkani|Kannada|Tamil|Malayalam|Bengali|Bangla|Nepali|Urdu|Punjabi|Telugu|Gujarati|Sanskrit|Tibetan|Ladakhi|Kashmiri|Odia|Rajasthani|Sikkimese|Newar|IAST|ISO|pronounced"
+
+
+def english(text: str) -> str:
+    text = re.sub(r"\s*\((?=[^()]*(?:[^\x00-\x7F]|\b(?:" + LANGUAGES + r")\b))[^()]*\)", "", text)
+    text = re.sub(r"[^\x00-\x7F\u00C0-\u017F\u2013\u2014\u2018\u2019\u201C\u201D\u20B9]+", " ", text)
+    text = re.sub(r"\(\s*[,;/]*\s*\)", "", text)
+    return re.sub(r"\s+([,.;:])", r"\1", re.sub(r"\s{2,}", " ", text)).strip()
 
 
 def sections(text: str) -> dict[str, str]:
@@ -190,7 +200,7 @@ def listings(text: str, page: str) -> list[dict]:
             if kind not in ("see", "do", "eat", "drink"):
                 continue
             name = plain(p.get("name", "")).rstrip(" :")
-            content = plain(p.get("content", ""))
+            content = english(plain(p.get("content", "")))
             if not name or len(name) > 80 or len(content) < 25:
                 continue
             out.append(
@@ -223,10 +233,10 @@ def bullets(text: str, page: str) -> list[dict]:
             if not m or "{{" in m.group(1):
                 continue
             name = plain(m.group(1))
-            rest = plain(m.group(2)).lstrip(" ,.:;-–—")
+            rest = english(plain(m.group(2))).lstrip(" ,.:;-–—")
             content = rest if len(rest) >= 25 else ""
             if line.strip().lower().startswith(("* the ", "*the ")):
-                content = plain(line.strip().lstrip("* "))
+                content = english(plain(line.strip().lstrip("* ")))
             if not name or len(name) > 80 or len(content) < 25:
                 continue
             out.append(
@@ -282,6 +292,8 @@ def card(item: dict, city: str, kind: str) -> dict:
         d["image"] = item["image"]
     if item["wiki"]:
         d["wiki"] = item["wiki"]
+    if item["wikidata"]:
+        d["wikidata"] = item["wikidata"]
     return d
 
 
@@ -367,14 +379,14 @@ def main(cache_dir: str = "data/wikivoyage") -> int:
         counts = {k: len(v) for k, v in city["sections"].items()}
         print(f"{name:16} {counts} info={sorted(city['info'])}", flush=True)
         cities[name] = city
-    old = json.loads(OUT.read_text()) if OUT.exists() else {}
+    old = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     data = {
         "licence": "Text and listings from Wikivoyage, CC BY-SA 4.0. Photos from Wikimedia Commons under their own licences.",
         "cities": cities,
         "wiki": old.get("wiki", {}),
         "routes": old.get("routes", {}),
     }
-    OUT.write_text(json.dumps(data, indent=1, ensure_ascii=False))
+    OUT.write_text(json.dumps(data, indent=1, ensure_ascii=False), encoding="utf-8")
     return 0
 
 

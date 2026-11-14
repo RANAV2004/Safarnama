@@ -12,7 +12,7 @@ FIXTURES = Path(__file__).resolve().parents[2] / "fixtures"
 
 @lru_cache
 def load(name: str) -> dict:
-    return json.loads((FIXTURES / f"{name}.json").read_text())
+    return json.loads((FIXTURES / f"{name}.json").read_text(encoding="utf-8"))
 
 
 def at(d: date, hhmm: str) -> datetime:

@@ -113,6 +113,24 @@ export default function Login() {
   const today = isoDay(new Date());
   return (
     <main className="auth">
+      <div className="auth-backdrop" aria-hidden="true">
+        <svg className="auth-route" viewBox="0 0 620 130">
+          <path className="auth-route-line" d="M30 96 C 150 14, 260 120, 380 54 S 540 26, 590 70" pathLength={1} />
+          <circle className="auth-pin" cx="30" cy="96" r="7" />
+          <circle className="auth-pin end" cx="590" cy="70" r="7" />
+        </svg>
+        <p className="auth-word">
+          {"Safarnama".split("").map((ch, i) => (
+            <span key={i} style={{ animationDelay: `${i * 45}ms` }}>
+              {ch}
+            </span>
+          ))}
+        </p>
+        <p className="auth-hindi" lang="hi">
+          सफ़रनामा
+        </p>
+        <p className="auth-tag">The story of your next journey</p>
+      </div>
       <div className="auth-card">
         <p className="brand">
           Safarnama <span lang="hi">सफ़रनामा</span>

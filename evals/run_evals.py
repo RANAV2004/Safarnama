@@ -97,7 +97,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=50)
     args = ap.parse_args()
-    trips = [json.loads(line) for line in (HERE / "trips.jsonl").read_text().splitlines() if line.strip()][: args.limit]
+    trips = [
+        json.loads(line) for line in (HERE / "trips.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()
+    ][: args.limit]
     systems = {"multi-agent": plan_trip, "single pass (no negotiation, no critic)": single_pass}
     if llm.enabled():
         systems["single LLM call"] = single_llm
@@ -119,8 +121,8 @@ def main():
         md.append("\n## Violations by type\n")
         md.append("| type | " + " | ".join(kinds) + " |\n|---|" + "---|" * len(kinds))
         md += [f"| {k} | " + " | ".join(str(kinds[n].get(k, 0)) for n in kinds) + " |" for k in all_kinds]
-    (HERE / "results.md").write_text("\n".join(md) + "\n")
-    (HERE / "results.json").write_text(json.dumps(raw, indent=1))
+    (HERE / "results.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+    (HERE / "results.json").write_text(json.dumps(raw, indent=1), encoding="utf-8")
     print(table(summary))
 
 

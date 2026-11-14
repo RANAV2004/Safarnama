@@ -38,7 +38,10 @@ function CardTile({ card, onOpen }: { card: Card; onOpen: (c: Card) => void }) {
   const kind = card.kind === "attraction" ? card.category : card.kind;
   return (
     <button type="button" className="tile" onClick={() => onOpen(card)}>
-      <Photo id={card.id} kind={kind} name={card.name} />
+      <span className="tile-photo">
+        <Photo id={card.id} kind={kind} name={card.name} src={card.photo_url} />
+        {card.photo_note && <span className="photo-note">{card.photo_note}</span>}
+      </span>
       <span className="tile-text">
         <strong>{card.name}</strong>
         <span className="muted small">
@@ -153,13 +156,12 @@ export default function Explore() {
               )}
               {shown.map((c) => (
                 <button key={c.name} type="button" className="city-card" onClick={() => pick(c.name)}>
-                  <Photo id={c.photo_id ?? c.name} kind="city" name={c.name} cover />
+                  <Photo id={c.photo_id ?? c.name} kind="city" name={c.name} src={c.photo_url} />
                   <span className="city-text">
                     <strong>{c.name}</strong>
-                    <span>{c.tagline}</span>
-                    <span className="small">
-                      {c.counts.attraction} sights · {c.counts.restaurant} restaurants · {c.counts.cafe} cafes ·{" "}
-                      {c.counts.photo} photo spots
+                    <span className="city-tagline">{c.tagline}</span>
+                    <span className="city-counts">
+                      {c.counts.attraction} sights · {c.counts.restaurant} restaurants · {c.counts.cafe} cafes
                     </span>
                   </span>
                 </button>
@@ -173,7 +175,7 @@ export default function Explore() {
               All destinations
             </button>
             <header className="city-hero">
-              <Photo id={city.name} kind="city" name={city.name} eager cover />
+              <Photo id={city.name} kind="city" name={city.name} src={city.photo_url} eager />
               <div className="city-hero-text">
                 <h1>{city.name}</h1>
                 <p>{city.tagline}</p>
@@ -211,7 +213,7 @@ export default function Explore() {
                 {city.top.map((c, i) => (
                   <li key={c.id}>
                     <button type="button" className="top-card" onClick={() => setOpen(c)}>
-                      <Photo id={c.id} kind={c.category} name={c.name} />
+                      <Photo id={c.id} kind={c.category} name={c.name} src={c.photo_url} />
                       <span className="rank">{i + 1}</span>
                       <strong>{c.name}</strong>
                     </button>

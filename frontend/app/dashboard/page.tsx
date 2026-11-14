@@ -53,13 +53,15 @@ type Phase = "form" | "flying" | "result";
 function suckInto(el: HTMLElement) {
   const r = el.getBoundingClientRect();
   el.style.transformOrigin = `${window.innerWidth / 2 - r.left}px ${window.innerHeight / 2 - r.top}px`;
-  el.style.transition = `transform ${SUCK_MS}ms cubic-bezier(.5, 0, .75, 0), opacity ${SUCK_MS * 0.8}ms cubic-bezier(.5, 0, .75, 0)`;
-  el.style.transform = "rotate(6deg) scale(0.06)";
+  el.style.willChange = "transform, opacity";
+  el.style.transition = `transform ${SUCK_MS}ms cubic-bezier(.6, 0, .35, 1), opacity ${SUCK_MS * 0.7}ms ease-in ${SUCK_MS * 0.2}ms`;
+  el.style.transform = "translateY(-2%) scale(0.18)";
   el.style.opacity = "0";
 }
 
 function restore(el: HTMLElement, pop: boolean) {
   el.style.transition = "none";
+  el.style.willChange = "";
   el.style.transform = "";
   el.style.opacity = "";
   el.classList.remove("pop-in");
@@ -148,12 +150,12 @@ export default function Dashboard() {
         if (e.agent === "done" && e.plan) final = e.plan;
         else if (e.agent === "error") {
           failed = e.note ?? "Planning failed.";
-          globe.current?.skip();
+          globe.current?.cancel();
         } else if (AGENT_NAMES[e.agent]) setCaption(`${AGENT_NAMES[e.agent]}: ${toRupeeSign(e.note ?? "")}`);
       },
       same ? plan?.trip_id : undefined,
     ).catch((err) => {
-      globe.current?.skip();
+      globe.current?.cancel();
       if (err instanceof AuthError) failed = "auth";
       else
         failed =
@@ -164,7 +166,6 @@ export default function Dashboard() {
     await Promise.all([globe.current?.travel(place(trip.origin), place(trip.destination)), planning]);
     if (failed || !final) {
       if (failed === "auth") return expired();
-      globe.current?.reset();
       restore(el, true);
       setPhase(before);
       setError(failed || "Planning failed.");
@@ -228,6 +229,21 @@ export default function Dashboard() {
       <Globe ref={globe} />
       <TopBar user={user} />
       <main className="column">
+        {plan?.trip_id && phase !== "flying" && (
+          <Friends
+            key={plan.trip_id}
+            tripId={plan.trip_id}
+            route={`${plan.request.origin} to ${plan.request.destination}`}
+            dates={`${shortDate(plan.request.start_date)} to ${shortDate(plan.request.end_date)}`}
+            user={user}
+            onAuthError={expired}
+            onLeft={() => {
+              setPlan(null);
+              setPins(NO_PINS);
+              setShowForm(true);
+            }}
+          />
+        )}
         {error && (
           <p className="error" role="alert">
             {toRupeeSign(error)}
@@ -282,21 +298,6 @@ export default function Dashboard() {
               downloading={downloading}
               onRegenerate={generate}
               onDownload={download}
-            />
-          )}
-          {plan?.trip_id && (
-            <Friends
-              key={plan.trip_id}
-              tripId={plan.trip_id}
-              route={`${plan.request.origin} to ${plan.request.destination}`}
-              dates={`${shortDate(plan.request.start_date)} to ${shortDate(plan.request.end_date)}`}
-              user={user}
-              onAuthError={expired}
-              onLeft={() => {
-                setPlan(null);
-                setPins(NO_PINS);
-                setShowForm(true);
-              }}
             />
           )}
           {plan && (

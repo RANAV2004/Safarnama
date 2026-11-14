@@ -11,9 +11,9 @@ from tests.fakes import answer
 def test_make_trips_is_repeatable(tmp_path, monkeypatch):
     monkeypatch.setattr(make_trips, "OUT", tmp_path / "a.jsonl")
     make_trips.main(10)
-    first = (tmp_path / "a.jsonl").read_text()
+    first = (tmp_path / "a.jsonl").read_text(encoding="utf-8")
     make_trips.main(10)
-    assert first == (tmp_path / "a.jsonl").read_text()
+    assert first == (tmp_path / "a.jsonl").read_text(encoding="utf-8")
     assert len(first.splitlines()) == 10
 
 
@@ -70,9 +70,9 @@ def test_run_evals_writes_report(tmp_path, monkeypatch):
     make_trips.main(6)
     monkeypatch.setattr("sys.argv", ["run_evals", "--limit", "6"])
     run_evals.main()
-    report = (tmp_path / "results.md").read_text()
+    report = (tmp_path / "results.md").read_text(encoding="utf-8")
     assert "plans with zero violations" in report and "budget level" in report
-    raw = json.loads((tmp_path / "results.json").read_text())
+    raw = json.loads((tmp_path / "results.json").read_text(encoding="utf-8"))
     assert set(raw) == {"multi-agent", "single pass (no negotiation, no critic)"}
     assert len(raw["multi-agent"]) == 6
 
@@ -95,3 +95,17 @@ def test_low_budget_trip_is_skipped(make_req):
         ],
     )
     assert rows == []
+
+
+def test_text_files_are_always_read_as_utf8():
+    import re
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    loose = []
+    for folder in ("app", "scripts", "evals", "tests"):
+        for path in (root / folder).rglob("*.py"):
+            for n, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+                if re.search(r"\.(read_text|write_text)\(", line) and "encoding=" not in line:
+                    loose.append(f"{path.relative_to(root)}:{n}")
+    assert loose == [], "set encoding='utf-8' so Windows reads the data files correctly"

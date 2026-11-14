@@ -17,10 +17,11 @@ export type GlobeHandle = {
   finish: () => Promise<void>;
   reset: () => void;
   skip: () => void;
+  cancel: () => void;
 };
 const PINK = "194, 24, 91";
 const IDLE_SPIN = 7;
-const IDLE_ALPHA = 0.38;
+const IDLE_ALPHA = 0.62;
 const SIZE = 0.62;
 const ARC_PX = 230;
 const FOLLOW = 7;
@@ -46,7 +47,22 @@ export default function Globe({ ref }: { ref?: Ref<GlobeHandle> }) {
   });
   const tweens = useRef<Tween[]>([]);
   const speed = useRef(1);
+  const run = useRef(0);
   const quiet = useRef(false);
+  function backToIdle() {
+    speed.current = 1;
+    tweens.current = [];
+    const v = goal.current;
+    Object.assign(trip.current, { from: undefined, to: undefined, progress: 0, pins: [] });
+    const s = { lat: v.lat, zoom: Math.max(v.zoom, 0.05), alpha: v.alpha };
+    v.idle = true;
+    tween(1400, (k) => {
+      const e = ease(k);
+      v.zoom = s.zoom * Math.pow(1 / s.zoom, e);
+      v.alpha = lerp(s.alpha, IDLE_ALPHA, e);
+      v.lat = lerp(s.lat, -18, e);
+    });
+  }
   function tween(dur: number, step: (k: number) => void) {
     return new Promise<void>((done) =>
       tweens.current.push({ start: performance.now(), dur: quiet.current ? 1 : dur, step, done }),
@@ -54,6 +70,7 @@ export default function Globe({ ref }: { ref?: Ref<GlobeHandle> }) {
   }
   useImperativeHandle(ref, () => ({
     async travel(from, to) {
+      const gen = ++run.current;
       speed.current = 1;
       tweens.current = [];
       const v = goal.current,
@@ -75,9 +92,11 @@ export default function Globe({ ref }: { ref?: Ref<GlobeHandle> }) {
         v.zoom = lerp(s.zoom, target, e);
         v.alpha = lerp(s.alpha, 0.95, e);
       });
+      if (gen !== run.current) return;
       t.pins = [from];
       t.pingAt = performance.now();
       await tween(250, () => {});
+      if (gen !== run.current) return;
       const along = geoInterpolate([from.lon, from.lat], [to.lon, to.lat]);
       await tween(2000, (k) => {
         const e = ease(k);
@@ -86,9 +105,11 @@ export default function Globe({ ref }: { ref?: Ref<GlobeHandle> }) {
         v.lon = turnTo(v.lon, -lon);
         v.lat = -lat;
       });
+      if (gen !== run.current) return;
       t.pins = [from, to];
       t.pingAt = performance.now();
       await tween(800, () => {});
+      if (gen !== run.current) return;
     },
     async finish() {
       const v = goal.current;
@@ -101,22 +122,17 @@ export default function Globe({ ref }: { ref?: Ref<GlobeHandle> }) {
       });
     },
     reset() {
-      speed.current = 1;
-      tweens.current = [];
-      const v = goal.current;
-      Object.assign(trip.current, { from: undefined, to: undefined, progress: 0, pins: [] });
-      const s = { lat: v.lat };
-      v.idle = true;
-      v.zoom = 0.6;
-      tween(1000, (k) => {
-        const e = ease(k);
-        v.zoom = lerp(0.6, 1, e);
-        v.alpha = lerp(0, IDLE_ALPHA, e);
-        v.lat = lerp(s.lat, -18, e);
-      });
+      backToIdle();
     },
     skip() {
-      speed.current = 5;
+      speed.current = 4;
+    },
+    cancel() {
+      run.current++;
+      const pending = tweens.current;
+      tweens.current = [];
+      pending.forEach((tw) => tw.done());
+      backToIdle();
     },
   }));
   useEffect(() => {
@@ -206,6 +222,15 @@ export default function Globe({ ref }: { ref?: Ref<GlobeHandle> }) {
         .rotate([v.lon, v.lat, 0]);
       const a = v.alpha;
       if (a > 0.005) {
+        const [cx, cy] = projection.translate();
+        const r = projection.scale();
+        const glow = ctx.createRadialGradient(cx - r * 0.3, cy - r * 0.35, r * 0.1, cx, cy, r);
+        glow.addColorStop(0, `rgba(255, 255, 255, ${0.55 * a})`);
+        glow.addColorStop(1, `rgba(${PINK}, ${0.07 * a})`);
+        ctx.beginPath();
+        path({ type: "Sphere" });
+        ctx.fillStyle = glow;
+        ctx.fill();
         stroke({ type: "Sphere" }, a * 0.9, 1.6);
         stroke(graticule, a * 0.28, 0.7);
         if (world.current) {
